@@ -43,32 +43,31 @@ header {
 .btn-primary {
     background-color: #06AEF4;
     border-color: #06AEF4;
-    padding: 10px 20px;
+    padding: 10px 40px;
     color: #ffffff;
     border-width: 2px;
+    border-radius: 50px;
 }
 
 .btn-primary.inverted {
-    background-color: #ffffff;
-    border-color: #ffffff;
-    color: #06AEF4;
+    background-color: #08FABF;
+    border-color: #08FABF;
+    color: #000000;
 }
 
 .btn-primary:hover {
     background-color: transparent;
     border-color: #06AEF4;
     color: #cdeffd;
-    padding: 10px 20px;
+    padding: 10px 40px;
 }
 
 .btn-primary.inverted:hover {
-    background-color: transparent;
-    border-color: #ffffff;
-    color: #ffffff;
+    color: #06AEF4;
 }
 
 .banner {
-    min-height: 110vh;
+    min-height: 115vh;
     width: 100%;
     background-image: url("../assets/images/banner.svg");
     background-repeat: no-repeat;
@@ -78,6 +77,8 @@ header {
     color: #ffffff;
     align-items: center;
     overflow: hidden;
+    position: relative;
+    z-index: 999;
 }
 
 .banner h2 {
@@ -102,6 +103,12 @@ header {
 .graduates-work {
     padding: 5rem 0 6rem;
     min-height: 360px;
+    background-image: url("../assets/images/section-1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 999;
 }
 
 .small-heading {
@@ -109,17 +116,32 @@ header {
     font-size: 1.640625rem;
 }
 
+.big-heading {
+    font-size: 2.34375rem;
+    font-weight: 600;
+}
+
+.big-subtitle {
+    font-size: 1.171875rem;
+    font-weight: 600;
+    color: #06AEF4;
+}
+
 .graduates-work .company {
     width: 250px;
 }
 
-.graduates-work .row {
-    background-color: #ffffff;
+.countries {
+    background-image: url("../assets/images/country-bg@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 15rem 0;
 }
 
-.countries {
-    padding: 6rem 0;
-    background-color: #F2F2F2;
+.countries > * {
+    position: relative;
+    z-index: 999;
 }
 
 .countries .flag {
@@ -131,28 +153,34 @@ header {
 }
 
 .company-wrapper {
-    position: absolute;
+    position: static;
     width: 100%;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 500ms ease;
-}
-
-.company-wrapper.active {
     opacity: 1;
     transition: opacity 500ms ease;
 }
 
+/*.company-wrapper.active {
+    opacity: 1;
+    transition: opacity 500ms ease;
+}*/
+
 .features {
     padding: 6rem 0;
+    background-image: url("../assets/images/section-2.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 999;
 }
 
 .feature-item-card {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem 2rem;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 171, 251, 0.16);
     height: 100%;
@@ -175,16 +203,17 @@ header {
 }
 
 .join-online-session {
-    padding: 4rem 0;
-    background-image: url("../assets/images/stripe bg.svg");
+    padding: 5rem 0;
+    background-image: url("../assets/images/join-free-online@2x.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;
-    color: #ffffff;
+    background-position: center;
+    color: #042343;
 }
 
-.join-online-session h5 {
-    font-size: 1.875rem;
+.join-online-session > * {
+    position: relative;
+    z-index: 999;
 }
 
 .join-online-session p {
@@ -194,34 +223,52 @@ header {
 
 .testimonials {
     padding: 6rem 0;
+    background-image: url("../assets/images/section-3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 999;
 }
 
 .quote-card {
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 10px;
-    border: 1px solid #343434;
     color: #343434;
+    background-color: #ffffff;
     height: 100%;
+    border: 1px solid #06AEF4;
+    box-shadow: 0 20px 6px rgba(142,204,230, 0.16);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .quote-card .quote-flag {
     display: block;
-    margin-right: 4rem;
-    width: 170px;
+    height: 2.2rem;
+}
+
+.quote-card .quote-stars {
+    display: block;
+    height: 1.5rem;
 }
 
 .quote-card .quote {
-    font-size: 1.171875rem;
+    font-size: 0.98rem;
     margin-bottom: 0.8rem;
 }
 
-.quote-icon {
-    height: 85%;
+.quote-card .quote-by {
+    font-size: 0.9rem;
 }
 
 footer {
-    background-color: #000000;
-    color: #ffffff;
+    padding-top: 10rem;
+    background-image: url("../assets/images/footer@2x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: #000000;
 }
 
 .footer-links {
@@ -231,15 +278,15 @@ footer {
 .footer-link {
     margin-top: 1rem;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     display: block;
     opacity: 1;
-    max-width: 300px;
+    max-width: 200px;
     transition: opacity 100ms ease;
 }
 
 .footer-link:hover {
-    color: #ffffff;
+    color: #000000;
     opacity: 0.7;
     transition: opacity 100ms ease;
 }
@@ -253,12 +300,24 @@ footer {
     height: 7rem;
     display: block;
     margin-bottom: 1.8rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-foot {
     padding: 1rem 0;
     text-align: center;
     border-top: 1px solid #4E4E4E;
+}
+
+@media (max-width: 1199px) {
+    .quote-card .quote-flag {
+        height: 2rem;
+    }
+
+    .quote-card .quote-stars {
+        height: 1rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -309,10 +368,37 @@ footer {
     }
 
     .quote-flag {
-        margin: 0 auto 2rem;
+        margin: 0 auto 1rem;
     }
 
-    .quote-card .d-flex {
-        flex-flow: column;
+    .feature-item-card {
+        box-shadow: none;
+        background-color: transparent;
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .feature-item-card h6 {
+        position: relative;
+    }
+
+    .feature-item-card h6::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -1rem;
+        width: 2px;
+        height: 100%;
+        background-color: #08FABF;
+        content: "";
+    }
+
+    .feature-item-card img {
+        margin-left: 0;
+        height: 3rem;
+    }
+
+    .quote-images {
+        flex-flow: column-reverse;
     }
 }
